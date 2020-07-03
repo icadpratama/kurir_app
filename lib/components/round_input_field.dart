@@ -6,15 +6,20 @@ import 'package:kurirapp/constants.dart';
 class RoundedInputField extends StatelessWidget {
   final String hintText;
   final IconData icon;
+  final TextInputType inputType;
   final ValueChanged<String> onChanged;
   const RoundedInputField(
-      {Key key, this.hintText, this.icon = Icons.phone, this.onChanged});
+      {Key key,
+      this.hintText,
+      this.icon = Icons.phone,
+      this.onChanged,
+      this.inputType});
 
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
       child: TextField(
-        keyboardType: TextInputType.phone,
+        keyboardType: inputType,
         onChanged: onChanged,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
