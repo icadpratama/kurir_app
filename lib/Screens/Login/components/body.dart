@@ -37,7 +37,7 @@ class Body extends StatelessWidget {
                 hintText: "Your Phone Number", onChanged: (value) {}),
             SizedBox(height: size.height * 0.02),
             RoundedButton(
-              text: "LOG IN",
+              text: "CONTINUE",
               textColor: Colors.white,
               borderColor: kPrimaryColor,
               press: () {},

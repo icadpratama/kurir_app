@@ -23,16 +23,21 @@ class Body extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     "Welcome to Kurir!",
-                    style: TextStyle(fontWeight: FontWeight.w900),
-                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.w800),
                   ),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
                 child: Text(
-                  "Are you ready to enjoy a whole new life without limits? Let's go!",
-                ),
+                    "Are you ready to enjoy a whole new life without limits? Let's go!",
+                    style: TextStyle(
+                        fontSize: 13,
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.w600)),
               ),
               SizedBox(height: size.height * 0.03),
               RoundedButton(
@@ -70,6 +75,11 @@ class Body extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(40, 10, 40, 0),
                 child: Text(
                   "By logging in or registering. I agree to our Terms of Services and Privacy Policy.",
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
             ]),
