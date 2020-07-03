@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   child: Text(
                     "Welcome to Kurir!",
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.w900),
                     textAlign: TextAlign.left,
                   ),
                 ),
