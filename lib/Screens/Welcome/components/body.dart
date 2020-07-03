@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Login/login_screen.dart';
+import 'package:kurirapp/Screens/Signup/signup_screen.dart';
 import 'package:kurirapp/Screens/Welcome/components/background.dart';
 import 'package:kurirapp/components/rounded_button.dart';
 import 'package:kurirapp/constants.dart';
@@ -65,7 +66,7 @@ class Body extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return;
+                        return SignupScreen();
                       },
                     ),
                   );
