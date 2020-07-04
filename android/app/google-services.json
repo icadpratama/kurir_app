@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "269461057057",
+    "firebase_url": "https://kurirapp-6835c.firebaseio.com",
+    "project_id": "kurirapp-6835c",
+    "storage_bucket": "kurirapp-6835c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269461057057:android:09c1800e48295ec4dd7d60",
+        "android_client_info": {
+          "package_name": "id.irsyad.kurirapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269461057057-5tl03cbrliq9i2ifvpo32t69kpeofli0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCetY9G96nKB_Cpc20uYNPsFc8A8vCYj5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269461057057-5tl03cbrliq9i2ifvpo32t69kpeofli0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
