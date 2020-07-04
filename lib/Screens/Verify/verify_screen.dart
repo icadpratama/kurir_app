@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kurirapp/Screens/Verify/components/body.dart';
+import 'package:kurirapp/constants.dart';
 
 class VerifyScreen extends StatefulWidget {
   @override
@@ -8,6 +10,16 @@ class VerifyScreen extends StatefulWidget {
 class _VerifyScreenState extends State<VerifyScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: kPrimaryBlack),
+        title: const Text(
+          'Enter OTP',
+          style: TextStyle(color: kPrimaryBlack),
+        ),
+        backgroundColor: Colors.white,
+      ),
+      body: Body(),
+    );
   }
 }
