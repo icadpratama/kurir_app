@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: new Image.asset('assets/images/splash_bg.png',
-                    width: size.width * 0.5),
+                    width: size.width * 0.7),
               ),
               SizedBox(height: size.height * 0.05),
               Center(
