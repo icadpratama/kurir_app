@@ -9,6 +9,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String phoneNumber;
     Size size = MediaQuery.of(context).size;
     return Background(
       child: SingleChildScrollView(
@@ -36,14 +37,19 @@ class Body extends StatelessWidget {
             RoundedInputField(
                 icon: Icons.phone,
                 inputType: TextInputType.phone,
-                hintText: "Your Phone Number",
-                onChanged: (value) {}),
+                hintText: " Your Phone Number",
+                obscure: false,
+                onChanged: (value) {
+                  phoneNumber = value;
+                }),
             SizedBox(height: size.height * 0.02),
             RoundedButton(
               text: "CONTINUE",
               textColor: Colors.white,
               borderColor: kPrimaryColor,
-              press: () {},
+              press: () {
+                print(phoneNumber);
+              },
             ),
           ])),
     );
