@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Signup/components/background.dart';
 import 'package:kurirapp/components/rounded_button.dart';
 import 'package:kurirapp/constants.dart';
+import 'package:pin_input_text_field/pin_input_text_field.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
@@ -24,11 +26,26 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: size.height * 0.08),
+          SizedBox(height: size.height * 0.1),
           Container(
             child: Image.asset(
               "assets/icons/lock_icon.png",
               width: size.width * 0.33,
+            ),
+          ),
+          SizedBox(height: size.height * 0.08),
+          Container(
+            padding: EdgeInsets.fromLTRB(80, 40, 80, 30),
+            child: PinInputTextField(
+              pinLength: 4,
+              decoration: CirclePinDecoration(
+                  textStyle: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                  strokeColor: kPrimaryLight,
+                  strokeWidth: 3,
+                  enteredColor: kPrimaryColor),
             ),
           ),
           SizedBox(height: size.height * 0.02),

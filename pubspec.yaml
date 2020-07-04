@@ -33,6 +33,7 @@ dependencies:
   line_icons: ^0.2.0
   intl_phone_number_input: ^0.4.6+2
   sms_autofill: ^1.2.1
+  pin_input_text_field: ^3.0.3
 
 dev_dependencies:
   flutter_test:
