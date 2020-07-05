@@ -26,8 +26,9 @@ class Body extends StatelessWidget {
     return Background(
       child: SingleChildScrollView(
         child: ConstrainedBox(
-            constraints:
-                BoxConstraints(minWidth: size.width, minHeight: size.height),
+            constraints: BoxConstraints(
+                minWidth: size.width * 60 / 100,
+                minHeight: size.height * 80 / 100),
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,7 +47,7 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: size.height * 0.08),
+                  // SizedBox(height: size.height * 0.08),
                   Container(
                     child: Image.asset(
                       "assets/icons/phone_icon.png",

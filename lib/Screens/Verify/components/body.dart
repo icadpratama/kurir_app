@@ -14,8 +14,9 @@ class Body extends StatelessWidget {
     return Background(
       child: SingleChildScrollView(
         child: ConstrainedBox(
-          constraints:
-              BoxConstraints(minWidth: size.width, minHeight: size.height),
+          constraints: BoxConstraints(
+              minWidth: size.width * 60 / 100,
+              minHeight: size.height * 80 / 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
