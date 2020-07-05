@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kurirapp/Screens/Homepage/homepage_screen.dart';
 import 'package:kurirapp/Screens/Signup/components/background.dart';
 import 'package:kurirapp/components/rounded_button.dart';
 import 'package:kurirapp/constants.dart';
@@ -44,7 +45,16 @@ class Body extends StatelessWidget {
                 child: PinFieldAutoFill(
                   codeLength: 6,
                   onCodeChanged: (val) {
-                    // print(val);
+                    if (val.length > 3) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return HomepageScreen();
+                          },
+                        ),
+                      );
+                    }
                   },
                   decoration: CirclePinDecoration(
                       textStyle: TextStyle(
@@ -67,8 +77,7 @@ class Body extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return null;
-                        // return VerifyScreen();
+                        return HomepageScreen();
                       },
                     ),
                   );
