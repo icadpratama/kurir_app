@@ -9,52 +9,67 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     String username;
     String email;
     String phoneNumber;
 
     return Background(
       child: SingleChildScrollView(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              RoundedInputField(
-                  icon: Icons.people,
-                  hintText: "Full Name",
-                  obscure: false,
-                  onChanged: (value) {
-                    if (value.length < 1) {
-                      print('Your name is empty');
-                    } else {
-                      username = value;
-                    }
-                  }),
-              RoundedInputField(
-                  icon: Icons.email,
-                  inputType: TextInputType.emailAddress,
-                  hintText: "Email",
-                  obscure: false,
-                  onChanged: (value) {
-                    email = value;
-                  }),
-              RoundedInputField(
-                  icon: Icons.phone,
-                  inputType: TextInputType.phone,
-                  hintText: "Phone Number",
-                  obscure: false,
-                  onChanged: (value) {
-                    phoneNumber = value;
-                  }),
-              RoundedButton(
-                  text: "SIGN UP",
-                  textColor: Colors.white,
-                  borderColor: kPrimaryColor,
-                  press: () {
-                    print(username);
-                    print(email);
-                    print(phoneNumber);
-                  })
-            ]),
+        child: ConstrainedBox(
+          constraints:
+              BoxConstraints(minWidth: size.width, minHeight: size.height),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Center(
+                  child: Container(
+                      padding: EdgeInsets.fromLTRB(0, 50, 0, 10),
+                      child: Image.asset(
+                        "assets/images/ic_logo.png",
+                        width: size.width * 0.3,
+                      )),
+                ),
+                SizedBox(height: size.height * 0.03),
+                RoundedInputField(
+                    icon: Icons.people,
+                    hintText: "Full Name",
+                    obscure: false,
+                    onChanged: (value) {
+                      if (value.length < 1) {
+                        print('Your name is empty');
+                      } else {
+                        username = value;
+                      }
+                    }),
+                RoundedInputField(
+                    icon: Icons.email,
+                    inputType: TextInputType.emailAddress,
+                    hintText: "Email",
+                    obscure: false,
+                    onChanged: (value) {
+                      email = value;
+                    }),
+                RoundedInputField(
+                    icon: Icons.phone,
+                    inputType: TextInputType.phone,
+                    hintText: "Phone Number",
+                    obscure: false,
+                    onChanged: (value) {
+                      phoneNumber = value;
+                    }),
+                RoundedButton(
+                    text: "SIGN UP",
+                    textColor: Colors.white,
+                    borderColor: kPrimaryColor,
+                    press: () {
+                      print(username);
+                      print(email);
+                      print(phoneNumber);
+                    })
+              ]),
+        ),
       ),
     );
   }

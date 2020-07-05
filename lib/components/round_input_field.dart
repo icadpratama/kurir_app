@@ -9,13 +9,16 @@ class RoundedInputField extends StatelessWidget {
   final TextInputType inputType;
   final ValueChanged<String> onChanged;
   final bool obscure;
+  final TextEditingController controller;
+
   const RoundedInputField(
       {Key key,
       this.hintText,
       this.icon = Icons.phone,
       this.onChanged,
       this.obscure = true,
-      this.inputType});
+      this.inputType,
+      this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +26,7 @@ class RoundedInputField extends StatelessWidget {
       child: new Column(
         children: <Widget>[
           TextField(
+            controller: controller,
             keyboardType: inputType,
             onChanged: onChanged,
             cursorColor: kPrimaryColor,

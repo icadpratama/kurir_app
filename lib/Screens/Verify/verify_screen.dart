@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Verify/components/body.dart';
 import 'package:kurirapp/constants.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class VerifyScreen extends StatefulWidget {
   @override
@@ -21,5 +22,9 @@ class _VerifyScreenState extends State<VerifyScreen> {
       ),
       body: Body(),
     );
+  }
+
+  void _listenOtp() async {
+    await SmsAutoFill().listenForCode;
   }
 }

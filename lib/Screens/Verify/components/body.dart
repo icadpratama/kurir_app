@@ -13,61 +13,68 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Background(
       child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Center(
-              child: Container(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 30),
-                child: Text(
-                  '''OTP will read automatically''',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
-                  textAlign: TextAlign.center,
+        child: ConstrainedBox(
+          constraints:
+              BoxConstraints(minWidth: size.width, minHeight: size.height),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Center(
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(0, 50, 0, 40),
+                  child: Text(
+                    '''OTP will read automatically''',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: size.height * 0.08),
-            Container(
-              child: Image.asset(
-                "assets/icons/lock_icon.png",
-                width: size.width * 0.41,
+              SizedBox(height: size.height * 0.08),
+              Container(
+                child: Image.asset(
+                  "assets/icons/lock_icon.png",
+                  width: size.width * 0.4,
+                ),
               ),
-            ),
-            SizedBox(height: size.height * 0.1),
-            Container(
-              padding: EdgeInsets.fromLTRB(80, 0, 80, 0),
-              child: PinInputTextField(
-                pinLength: 4,
-                decoration: CirclePinDecoration(
-                    textStyle: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                    strokeColor: kPrimaryLight,
-                    strokeWidth: 3,
-                    enteredColor: kPrimaryColor),
+              SizedBox(height: size.height * 0.1),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: PinFieldAutoFill(
+                  codeLength: 6,
+                  onCodeChanged: (val) {
+                    // print(val);
+                  },
+                  decoration: CirclePinDecoration(
+                      textStyle: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                      strokeColor: kPrimaryLight,
+                      strokeWidth: 3,
+                      enteredColor: kPrimaryColor),
+                ),
               ),
-            ),
-            SizedBox(height: size.height * 0.04),
-            RoundedButton(
-              text: "VERIFY",
-              color: kPrimaryGreen,
-              textColor: Colors.white,
-              borderColor: kPrimaryGreen,
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return null;
-                      // return VerifyScreen();
-                    },
-                  ),
-                );
-              },
-            ),
-          ],
+              SizedBox(height: size.height * 0.04),
+              RoundedButton(
+                text: "VERIFY",
+                color: kPrimaryGreen,
+                textColor: Colors.white,
+                borderColor: kPrimaryGreen,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return null;
+                        // return VerifyScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
