@@ -8,3 +8,4 @@ const kSecondaryLight = Color(0xFF8D8D8D);
 const kPrimaryColor100 = Color(0xFFFEE5E6);
 const kPrimaryGreen = Color(0xFF53D76A);
 const kPrimaryYellow = Color(0xFFFFC700);
+const kBackgroundColor = Color(0xFFf9f9fb);

@@ -13,7 +13,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
       child: ListView(
-        padding: EdgeInsets.fromLTRB(40, 20, 0, 0),
+        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
         children: <Widget>[
           TopInfo(),
           Padding(
@@ -28,6 +28,20 @@ class _BodyState extends State<Body> {
             ),
           ),
           FoodCategory(),
+          Padding(
+            padding: EdgeInsets.only(top: 40, bottom: 20),
+            child: Text(
+              "Near You",
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 40, bottom: 20),
+            child: Text(
+              "Most Popular",
+              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
+            ),
+          ),
         ],
       ),
     );

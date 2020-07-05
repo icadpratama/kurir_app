@@ -6,7 +6,7 @@ import 'package:kurirapp/components/round_input_field.dart';
 import 'package:kurirapp/components/rounded_button.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:kurirapp/services/authservice.dart';
-import 'package:sms_autofill/sms_autofill.dart';
+// import 'package:sms_autofill/sms_autofill.dart';
 
 class Body extends StatelessWidget {
   String phoneNo, verificationId, smsCode;
@@ -15,10 +15,10 @@ class Body extends StatelessWidget {
 
   final myController = TextEditingController();
 
-  @override
-  void dispose() {
-    myController.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   myController.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {

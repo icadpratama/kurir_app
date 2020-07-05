@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/constants.dart';
+import 'package:kurirapp/my_flutter_app_icons.dart';
 
 class SearchField extends StatelessWidget {
   @override
@@ -11,15 +12,18 @@ class SearchField extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontSize: 16.0),
           cursorColor: kPrimaryColor,
           decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white,
               contentPadding:
                   EdgeInsets.symmetric(horizontal: 5.0, vertical: 14.0),
               prefixIcon: Material(
+                  color: Colors.white,
                   // elevation: 2.0,
                   // borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   child: Icon(
-                Icons.search,
-                color: Colors.black,
-              )),
+                    Icons.search,
+                    color: Colors.black,
+                  )),
               suffixIcon: Material(
                 elevation: 2.0,
                 borderRadius: BorderRadius.only(
@@ -29,7 +33,7 @@ class SearchField extends StatelessWidget {
                 color: kPrimaryColor,
                 child: new IconButton(
                     icon: new Icon(
-                      Icons.filter,
+                      MyFlutterApp.params,
                       color: kPrimaryDark,
                     ),
                     onPressed: null),

@@ -11,7 +11,7 @@ class TopInfo extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: size.height * 0.08),
+            SizedBox(height: size.height * 0.05),
             Text(
               "What would\nyou like to eat?",
               style: textStyle,

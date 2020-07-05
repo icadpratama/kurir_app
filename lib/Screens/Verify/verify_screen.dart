@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Verify/components/body.dart';
 import 'package:kurirapp/constants.dart';
-import 'package:sms_autofill/sms_autofill.dart';
+// import 'package:sms_autofill/sms_autofill.dart';
 
 class VerifyScreen extends StatefulWidget {
   @override
@@ -12,6 +12,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         iconTheme: IconThemeData(color: kPrimaryDark),
         title: const Text(
@@ -24,7 +25,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
     );
   }
 
-  void _listenOtp() async {
-    await SmsAutoFill().listenForCode;
-  }
+  // void _listenOtp() async {
+  //   await SmsAutoFill().listenForCode;
+  // }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kurirapp/constants.dart';
 
 class FoodCard extends StatelessWidget {
   final String categoryName;

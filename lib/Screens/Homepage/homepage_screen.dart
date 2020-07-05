@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Homepage/components/body.dart';
 import 'package:kurirapp/constants.dart';
+import 'package:kurirapp/my_flutter_app_icons.dart';
 
 class HomepageScreen extends StatefulWidget {
   @override
@@ -11,13 +12,33 @@ class _HomepageScreenState extends State<HomepageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
+        backgroundColor: kBackgroundColor,
+        elevation: 0,
         iconTheme: IconThemeData(color: kPrimaryDark),
         title: const Text(
           'Deliver to',
           style: TextStyle(color: kPrimaryDark),
         ),
-        backgroundColor: Colors.white,
+        leading: Container(
+          padding: EdgeInsets.only(left: 30),
+          child: Tab(
+            icon: Icon(MyFlutterApp.th_large),
+          ),
+        ),
+        actions: <Widget>[
+          Container(
+            padding: EdgeInsets.only(right: 15),
+            child: IconButton(
+              icon: const Icon(
+                Icons.notifications,
+                color: kPrimaryColor,
+              ),
+              onPressed: () {},
+            ),
+          )
+        ],
       ),
       body: Body(),
     );

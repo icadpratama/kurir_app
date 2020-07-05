@@ -11,6 +11,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         iconTheme: IconThemeData(color: kPrimaryDark),
         title: const Text(
