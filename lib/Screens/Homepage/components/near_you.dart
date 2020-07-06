@@ -3,16 +3,16 @@ import 'package:kurirapp/constants.dart';
 import 'small_floating_button.dart';
 
 List<Food> foodList = [
-  Food(name: "Cereals", image: "1.jpg", price: 200),
-  Food(name: "Massala", image: "3.jpg", price: 250),
-  Food(name: "Taccos", image: "5.jpg", price: 372),
-  Food(name: "Cereals", image: "1.jpg", price: 900),
+  Food(name: "Cereals", image: "1.jpg", price: 20000),
+  Food(name: "Massala", image: "3.jpg", price: 20000),
+  Food(name: "Taccos", image: "5.jpg", price: 30000),
+  Food(name: "Cereals", image: "1.jpg", price: 90000),
 ];
 
 class Food {
   final String name;
   final String image;
-  final double price;
+  final int price;
 
   Food({this.name, this.image, this.price});
 }
