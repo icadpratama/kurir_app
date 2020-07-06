@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Homepage/components/food_category.dart';
+import 'package:kurirapp/Screens/Homepage/components/most_popular.dart';
+import 'package:kurirapp/Screens/Homepage/components/near_you.dart';
 import 'package:kurirapp/Screens/Homepage/components/search_field.dart';
 import 'package:kurirapp/Screens/Homepage/components/top_info.dart';
 
@@ -35,6 +37,7 @@ class _BodyState extends State<Body> {
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
             ),
           ),
+          NearYou(),
           Padding(
             padding: EdgeInsets.only(top: 40, bottom: 20),
             child: Text(
@@ -42,6 +45,7 @@ class _BodyState extends State<Body> {
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
             ),
           ),
+          NearYou(),
         ],
       ),
     );
