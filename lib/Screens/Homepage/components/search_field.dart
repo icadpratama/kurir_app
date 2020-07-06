@@ -1,19 +1,86 @@
 import 'package:flutter/material.dart';
+import 'package:kurirapp/components/rectangle_button.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:kurirapp/my_flutter_app_icons.dart';
 
 class SearchField extends StatelessWidget {
   _showModalBottomSheet(context) {
+    Size size = MediaQuery.of(context).size;
     showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
-          return Center(
+          return SingleChildScrollView(
             child: Container(
               decoration: BoxDecoration(
                   color: kBackgroundColor,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20))),
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40))),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                    child: Text(
+                      "Filter Your Search",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                    child: Text(
+                      "Prize",
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                      child: RectangleButton(
+                        text: "\$",
+                        textColor: kPrimaryDark,
+                        borderColor: kPrimaryLight,
+                      )),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                    child: Text(
+                      "Rating",
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                    child: RectangleButton(
+                      text: "1",
+                      textColor: kPrimaryDark,
+                      borderColor: kPrimaryLight,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                    child: Text(
+                      "Types",
+                      style:
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                    child: RectangleButton(
+                      text: "Fast Food",
+                      textColor: kPrimaryDark,
+                      borderColor: kPrimaryLight,
+                      press: () {
+                        print("Fast Food");
+                      },
+                    ),
+                  ),
+                  SizedBox(height: size.height * 0.03),
+                ],
+              ),
             ),
           );
         });
