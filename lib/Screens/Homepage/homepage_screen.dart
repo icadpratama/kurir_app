@@ -22,14 +22,12 @@ class _HomepageScreenState extends State<HomepageScreen> {
           style: TextStyle(color: kPrimaryDark),
         ),
         leading: Container(
-          padding: EdgeInsets.only(left: 30),
           child: Tab(
             icon: Icon(MyFlutterApp.th_large),
           ),
         ),
         actions: <Widget>[
           Container(
-            padding: EdgeInsets.only(right: 15),
             child: IconButton(
               icon: const Icon(
                 Icons.notifications,

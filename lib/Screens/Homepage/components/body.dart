@@ -13,11 +13,11 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
       child: ListView(
-        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+        padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
         children: <Widget>[
-          TopInfo(),
+          // TopInfo(),
           Padding(
-            padding: EdgeInsets.only(top: 40, right: 30, bottom: 20),
+            padding: EdgeInsets.only(top: 20, right: 12, bottom: 20),
             child: SearchField(),
           ),
           Padding(

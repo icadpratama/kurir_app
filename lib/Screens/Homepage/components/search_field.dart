@@ -6,7 +6,6 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 2.0,
       borderRadius: BorderRadius.all(Radius.circular(5.0)),
       child: TextField(
           style: TextStyle(color: Colors.black, fontSize: 16.0),
@@ -25,7 +24,6 @@ class SearchField extends StatelessWidget {
                     color: Colors.black,
                   )),
               suffixIcon: Material(
-                elevation: 2.0,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(5.0),
                   topRight: Radius.circular(5.0),
@@ -34,12 +32,12 @@ class SearchField extends StatelessWidget {
                 child: new IconButton(
                     icon: new Icon(
                       MyFlutterApp.params,
-                      color: kPrimaryDark,
+                      color: Colors.white,
                     ),
                     onPressed: null),
               ),
               border: InputBorder.none,
-              hintText: "Search Food")),
+              hintText: "What would you like to eat?")),
     );
   }
 }
