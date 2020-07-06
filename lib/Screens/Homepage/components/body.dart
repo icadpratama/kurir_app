@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Homepage/components/food_category.dart';
-import 'package:kurirapp/Screens/Homepage/components/most_popular.dart';
 import 'package:kurirapp/Screens/Homepage/components/near_you.dart';
 import 'package:kurirapp/Screens/Homepage/components/search_field.dart';
-import 'package:kurirapp/Screens/Homepage/components/top_info.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -17,10 +15,12 @@ class _BodyState extends State<Body> {
       child: ListView(
         padding: EdgeInsets.fromLTRB(17, 0, 0, 0),
         children: <Widget>[
-          // TopInfo(),
           Padding(
             padding: EdgeInsets.only(top: 20, right: 12, bottom: 20),
-            child: SearchField(),
+            child: Theme(
+                data:
+                    Theme.of(context).copyWith(canvasColor: Colors.transparent),
+                child: SearchField()),
           ),
           Padding(
             padding: EdgeInsets.only(top: 20, bottom: 20),
