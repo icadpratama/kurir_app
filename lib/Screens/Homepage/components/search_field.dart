@@ -10,7 +10,7 @@ class SearchField extends StatelessWidget {
           return Center(
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: kBackgroundColor,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
