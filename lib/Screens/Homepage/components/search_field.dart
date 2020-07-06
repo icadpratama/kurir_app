@@ -9,80 +9,79 @@ class SearchField extends StatelessWidget {
     showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
-          return SingleChildScrollView(
-            child: Container(
+          return Container(
               decoration: BoxDecoration(
                   color: kBackgroundColor,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40))),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                    child: Text(
-                      "Filter Your Search",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15))),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 16, 0, 0),
+                      child: Text(
+                        "Filter Your Search",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w800),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                    child: Text(
-                      "Prize",
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                      child: Text(
+                        "Prize",
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w700),
+                      ),
                     ),
-                  ),
-                  Padding(
+                    Padding(
+                        padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                        child: RectangleButton(
+                          text: "\$",
+                          textColor: kPrimaryDark,
+                          borderColor: kPrimaryLight,
+                        )),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                      child: Text(
+                        "Rating",
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                    Padding(
                       padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
                       child: RectangleButton(
-                        text: "\$",
+                        text: "1",
                         textColor: kPrimaryDark,
                         borderColor: kPrimaryLight,
-                      )),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                    child: Text(
-                      "Rating",
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                    child: RectangleButton(
-                      text: "1",
-                      textColor: kPrimaryDark,
-                      borderColor: kPrimaryLight,
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                      child: Text(
+                        "Types",
+                        style: TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w700),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                    child: Text(
-                      "Types",
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
+                      child: RectangleButton(
+                        text: "Fast Food",
+                        textColor: kPrimaryDark,
+                        borderColor: kPrimaryLight,
+                        press: () {
+                          print("Fast Food");
+                        },
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 30, 0, 0),
-                    child: RectangleButton(
-                      text: "Fast Food",
-                      textColor: kPrimaryDark,
-                      borderColor: kPrimaryLight,
-                      press: () {
-                        print("Fast Food");
-                      },
-                    ),
-                  ),
-                  SizedBox(height: size.height * 0.03),
-                ],
-              ),
-            ),
-          );
+                    SizedBox(height: size.height * 0.03),
+                  ],
+                ),
+              ));
         });
   }
 
