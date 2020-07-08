@@ -6,6 +6,13 @@ class OrderCard extends StatefulWidget {
 }
 
 class _OrderCardState extends State<OrderCard> {
+  int order = 0;
+
+  @override
+  void initState() {
+    order = order + 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -23,21 +30,32 @@ class _OrderCardState extends State<OrderCard> {
             child: Column(
               children: <Widget>[
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    setState(() {
+                      order = order + 1;
+                    });
+                  },
                   child: Icon(
                     Icons.keyboard_arrow_up,
                     color: Colors.grey[400],
                   ),
                 ),
                 Text(
-                  "0",
+                  "$order",
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[400]),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    setState(() {
+                      order = order - 1;
+                      if (order < 0) {
+                        order = 0;
+                      }
+                    });
+                  },
                   child: Icon(
                     Icons.keyboard_arrow_down,
                     color: Colors.grey[400],
