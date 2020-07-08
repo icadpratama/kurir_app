@@ -41,9 +41,9 @@ class Body extends StatelessWidget {
               ),
               SizedBox(height: size.height * 0.1),
               Container(
-                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
                 child: PinFieldAutoFill(
-                  codeLength: 6,
+                  codeLength: 4,
                   onCodeChanged: (val) {
                     if (val.length > 3) {
                       Navigator.push(
