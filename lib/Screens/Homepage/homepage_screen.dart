@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Homepage/components/body.dart';
+import 'package:kurirapp/Screens/Profile/profile_screen.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:kurirapp/my_flutter_app_icons.dart';
 
@@ -9,12 +10,21 @@ class HomepageScreen extends StatefulWidget {
 }
 
 class _HomepageScreenState extends State<HomepageScreen> {
-  int _currentIndex = 0;
+  int currentTab = 0;
+  List<Widget> pages;
+  Widget currentPage;
+  HomepageScreen homepageScreen;
+  ProfileScreen profileScreen;
 
-  void _changeIndex(value) {
-    setState(() {
-      _currentIndex = value;
-    });
+  @override
+  void initState() {
+    profileScreen = ProfileScreen();
+    homepageScreen = HomepageScreen();
+
+    pages = [homepageScreen, profileScreen];
+
+    currentPage = homepageScreen;
+    super.initState();
   }
 
   @override
@@ -49,9 +59,12 @@ class _HomepageScreenState extends State<HomepageScreen> {
       ),
       body: Body(),
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: this._currentIndex,
-          onTap: (value) {
-            this._changeIndex(value);
+          currentIndex: this.currentTab,
+          onTap: (index) {
+            setState(() {
+              currentTab = index;
+              currentPage = pages[index];
+            });
           },
           type: BottomNavigationBarType.fixed,
           selectedItemColor: kPrimaryColor,
@@ -60,15 +73,29 @@ class _HomepageScreenState extends State<HomepageScreen> {
           backgroundColor: kBackgroundColor,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home), title: Text("Home")),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.mail),
-              title: Text("Message"),
+              icon: Icon(
+                Icons.home,
+              ),
+              title: Text("Home"),
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_basket), title: Text("Order")),
+              icon: Icon(
+                Icons.explore,
+              ),
+              title: Text("Explore"),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.people), title: Text("Profile")),
+              icon: Icon(
+                Icons.shopping_cart,
+              ),
+              title: Text("Orders"),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+              ),
+              title: Text("Profile"),
+            ),
           ]),
     );
   }
