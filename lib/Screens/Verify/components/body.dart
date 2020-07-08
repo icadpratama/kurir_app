@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kurirapp/Screens/Homepage/homepage_screen.dart';
 import 'package:kurirapp/Screens/Signup/components/background.dart';
+import 'package:kurirapp/Screens/main_screen.dart';
 import 'package:kurirapp/components/rounded_button.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:pin_input_text_field/pin_input_text_field.dart';
@@ -50,7 +50,7 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return HomepageScreen();
+                            return MainScreen();
                           },
                         ),
                       );
@@ -77,7 +77,7 @@ class Body extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomepageScreen();
+                        return MainScreen();
                       },
                     ),
                   );

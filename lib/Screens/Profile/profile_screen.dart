@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kurirapp/constants.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -8,8 +9,21 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[Text("Profile Page")],
-    );
+    return Scaffold(
+        backgroundColor: kBackgroundColor,
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Profile",
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.w800),
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 }
