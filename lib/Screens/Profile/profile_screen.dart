@@ -18,7 +18,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 50),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -62,7 +62,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Richmond Blankson",
+                        "Irsyad Jamal Pratama Putra",
                         style: TextStyle(
                           fontSize: 16.0,
                         ),
@@ -107,7 +107,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       Divider(
                         height: 10.0,
-                        color: Colors.grey,
+                        color: kBackgroundColor,
                       ),
                       CustomListTile(
                         icon: Icons.visibility,
@@ -115,7 +115,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       Divider(
                         height: 10.0,
-                        color: Colors.grey,
+                        color: kBackgroundColor,
                       ),
                       CustomListTile(
                         icon: Icons.shopping_cart,
@@ -123,7 +123,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       Divider(
                         height: 10.0,
-                        color: Colors.grey,
+                        color: kBackgroundColor,
                       ),
                       CustomListTile(
                         icon: Icons.payment,
@@ -131,7 +131,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       Divider(
                         height: 10.0,
-                        color: Colors.grey,
+                        color: kBackgroundColor,
                       ),
                     ],
                   ),
@@ -167,18 +167,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           Switch(
                             value: turnOnNotification,
+                            activeColor: kPrimaryColor,
                             onChanged: (bool value) {
-                              // print("The value: $value");
                               setState(() {
                                 turnOnNotification = value;
                               });
                             },
                           ),
                         ],
-                      ),
-                      Divider(
-                        height: 10.0,
-                        color: Colors.grey,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -191,18 +187,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           Switch(
                             value: turnOnLocation,
+                            activeColor: kPrimaryColor,
                             onChanged: (bool value) {
-                              // print("The value: $value");
                               setState(() {
                                 turnOnLocation = value;
                               });
                             },
                           ),
                         ],
-                      ),
-                      Divider(
-                        height: 10.0,
-                        color: Colors.grey,
                       ),
                     ],
                   ),
@@ -230,17 +222,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text("Language", style: TextStyle(fontSize: 16.0)),
-                        // SizedBox(height: 10.0,),
+                        SizedBox(
+                          height: 10.0,
+                        ),
                         Divider(
                           height: 30.0,
-                          color: Colors.grey,
+                          color: kBackgroundColor,
                         ),
                         Text("Currency", style: TextStyle(fontSize: 16.0)),
-                        // SizedBox(height: 10.0,),
-                        Divider(
-                          height: 30.0,
-                          color: Colors.grey,
-                        ),
                       ],
                     ),
                   ),

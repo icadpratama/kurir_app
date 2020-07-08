@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kurirapp/constants.dart';
 
 class CustomListTile extends StatelessWidget {
   final IconData icon;
@@ -14,7 +15,7 @@ class CustomListTile extends StatelessWidget {
         children: <Widget>[
           Icon(
             icon,
-            color: Colors.blue,
+            color: kPrimaryColor,
           ),
           SizedBox(
             width: 15.0,
