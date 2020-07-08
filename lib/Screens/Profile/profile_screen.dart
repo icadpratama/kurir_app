@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kurirapp/components/rounded_button.dart';
 import 'package:kurirapp/components/small_button.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:kurirapp/components/custom_list_title.dart';
@@ -49,7 +50,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ],
                       image: DecorationImage(
                         image: AssetImage(
-                          "assets/images/breakfast.jpeg",
+                          "assets/images/profile-min.jpg",
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -71,7 +72,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 10.0,
                       ),
                       Text(
-                        "+233247656959",
+                        "+6281517454793",
                         style: TextStyle(color: Colors.grey),
                       ),
                       SizedBox(
@@ -235,6 +236,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
               ),
+              Padding(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                padding: EdgeInsets.only(left: 20, top: 10),
+                child: RoundedButton(
+                  text: "LOG OUT",
+                  textColor: Colors.white,
+                  borderColor: kPrimaryColor,
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          // return LoginScreen();
+                        },
+                      ),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),
