@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Homepage/components/body.dart';
-import 'package:kurirapp/Screens/Login/login_screen.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:kurirapp/my_flutter_app_icons.dart';
 
@@ -10,8 +9,17 @@ class HomepageScreen extends StatefulWidget {
 }
 
 class _HomepageScreenState extends State<HomepageScreen> {
+  int _currentIndex = 0;
+
+  void _changeIndex(value) {
+    setState(() {
+      _currentIndex = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    // int _currentIndex = 0;
     return Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
@@ -40,25 +48,28 @@ class _HomepageScreenState extends State<HomepageScreen> {
         ],
       ),
       body: Body(),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            backgroundColor: kPrimaryColor,
-            title: Text("Home")),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.mail),
-          backgroundColor: kPrimaryColor,
-          title: Text("Message"),
-        ),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_basket),
-            backgroundColor: kPrimaryColor,
-            title: Text("Order")),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.people_outline),
-            backgroundColor: kPrimaryColor,
-            title: Text("Profile")),
-      ]),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: this._currentIndex,
+          onTap: (value) {
+            this._changeIndex(value);
+          },
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: kPrimaryColor,
+          unselectedItemColor: kPrimaryColor,
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w800),
+          backgroundColor: kBackgroundColor,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home), title: Text("Home")),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.mail),
+              title: Text("Message"),
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_basket), title: Text("Order")),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.people), title: Text("Profile")),
+          ]),
     );
   }
 }
