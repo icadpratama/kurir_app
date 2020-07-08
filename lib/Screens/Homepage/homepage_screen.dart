@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kurirapp/Screens/Homepage/components/body.dart';
+import 'package:kurirapp/Screens/Login/login_screen.dart';
 import 'package:kurirapp/constants.dart';
 import 'package:kurirapp/my_flutter_app_icons.dart';
 
@@ -39,6 +40,25 @@ class _HomepageScreenState extends State<HomepageScreen> {
         ],
       ),
       body: Body(),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            backgroundColor: kPrimaryColor,
+            title: Text("Home")),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.mail),
+          backgroundColor: kPrimaryColor,
+          title: Text("Message"),
+        ),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_basket),
+            backgroundColor: kPrimaryColor,
+            title: Text("Order")),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.people_outline),
+            backgroundColor: kPrimaryColor,
+            title: Text("Profile")),
+      ]),
     );
   }
 }
