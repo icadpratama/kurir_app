@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
               ),
               SizedBox(height: size.height * 0.1),
               Container(
-                padding: EdgeInsets.fromLTRB(70, 0, 70, 0),
+                padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
                 child: PinFieldAutoFill(
                   codeLength: 4,
                   onCodeChanged: (val) {
